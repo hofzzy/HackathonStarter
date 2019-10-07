@@ -94,11 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF73BF2B22204E55000CF2ED /* Build configuration list for PBXNativeTarget "HackathonStarter" */;
 			buildPhases = (
-				FF73BF372220571E000CF2ED /* ShellScript */,
+				FF73BF372220571E000CF2ED /* R.swift */,
 				FF73BF1522204E53000CF2ED /* Sources */,
 				FF73BF1622204E53000CF2ED /* Frameworks */,
 				FF73BF1722204E53000CF2ED /* Resources */,
 				FF73BF35222055F8000CF2ED /* Carthage */,
+				FFFEFD7A234AC1E800C0F4A5 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -175,7 +176,7 @@
 			shellPath = /bin/sh;
 			shellScript = "carthage-copy-frameworks\n";
 		};
-		FF73BF372220571E000CF2ED /* ShellScript */ = {
+		FF73BF372220571E000CF2ED /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,6 +186,7 @@
 			inputPaths = (
 				"$TEMP_DIR/rswift-lastrun",
 			);
+			name = R.swift;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -193,6 +195,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$SRCROOT/bin/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		FFFEFD7A234AC1E800C0F4A5 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
