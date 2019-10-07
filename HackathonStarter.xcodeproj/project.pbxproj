@@ -98,7 +98,7 @@
 				FF73BF1522204E53000CF2ED /* Sources */,
 				FF73BF1622204E53000CF2ED /* Frameworks */,
 				FF73BF1722204E53000CF2ED /* Resources */,
-				FF73BF35222055F8000CF2ED /* ShellScript */,
+				FF73BF35222055F8000CF2ED /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -156,7 +156,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FF73BF35222055F8000CF2ED /* ShellScript */ = {
+		FF73BF35222055F8000CF2ED /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -164,20 +164,15 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
 			);
+			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Rswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "carthage-copy-frameworks\n";
 		};
 		FF73BF372220571E000CF2ED /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
